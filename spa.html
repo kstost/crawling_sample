@@ -11,13 +11,15 @@
         </style>
         <script>
             window.onload=function() {
-                let acm=0;
-                for(let i=1;i<=4;i++) {
-                    acm+=i;
-                    let div = document.createElement('div');
-                    div.innerHTML=acm+'';
-                    document.body.appendChild(div);
-                }
+                setTimeout(()=>{
+                    let acm=0;
+                    for(let i=1;i<=4;i++) {
+                        acm+=i;
+                        let div = document.createElement('div');
+                        div.innerHTML=acm+'';
+                        document.body.appendChild(div);
+                    }
+                },2000);
             };
         </script>
     </head>
