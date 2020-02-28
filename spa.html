@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin:0;
+            }
+            div {
+                border-bottom: 1px solid green;
+                padding: 10px;
+            }
+        </style>
+        <script>
+            window.onload=function() {
+                let acm=0;
+                for(let i=1;i<=4;i++) {
+                    acm+=i;
+                    let div = document.createElement('div');
+                    div.innerHTML=acm+'';
+                    document.body.appendChild(div);
+                }
+            };
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
