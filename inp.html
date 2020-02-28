@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin:0;
+            }
+            div {
+                padding: 10px;
+            }
+        </style>
+        <script>
+            let list = 'January, February, March, April, May, June, July, August, September, October, November, December'.split(',').map(a=>a.trim());
+            window.onload=function() {
+                let result = document.getElementById('result');
+                let search = document.getElementById('search');
+                let subm=()=>{
+                    result.innerText = 'Searching...';
+                    setTimeout(()=>{
+                        let val = list[Number(search.value)-1];
+                        result.innerText = '';
+                        if(val) {
+                            result.innerText = '';
+                            result.innerText = val;
+                        } else {
+                            result.innerText = 'out of range';
+                        }
+                    }, 500);
+                };
+                document.getElementById('submit').addEventListener('click',function(){
+                    subm();
+                });
+                search.addEventListener('keypress',function(e){
+                    if(e.keyCode === 13) {
+                        subm();
+                    }
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <input type='text' id='search' />
+        <button id='submit'>확인</button>
+        <div id='result'></div>
+    </body>
+</html>
