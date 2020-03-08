@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin:0;
+            }
+            div {
+                border-bottom: 1px solid green;
+                padding: 10px;
+            }
+        </style>
+        <script>
+            window.onload=function() {
+                document.querySelectorAll('select')[0].addEventListener('change',function(){
+                    console.log(this.value);
+                });
+            };
+        </script>
+    </head>
+    <body>
+        <select>
+            <option value='aa'>aa</option>
+            <option value='bb'>bb</option>
+        </select>
+    </body>
+</html>
